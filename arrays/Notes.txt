@@ -1,0 +1,19 @@
+Ref: Data Structures Through C-Yashavant Kanetkar
+
+Array Declaration Examples:
+---------------------------
+arr1[5]		A 1-D array holding 5 elements.
+arry2[2][5]	A 2-D array holding 10 elements.
+arry3[2][5][3]	A 3-D array holding 30 elements.
+
+
+Array Operations:
+-----------------
+Traversal	Processing each element in the array.
+Search		Finding the location of an element with a given value.
+Insertion	Adding a new element to an array.
+Deletion	Removing an element from an array.
+Sorting		Organizing the elements in some order.
+Merging		Combining two arrays into a single array.
+Reversing	Reversing the elements of an array.
+
