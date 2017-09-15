@@ -17,3 +17,21 @@ Sorting		Organizing the elements in some order.
 Merging		Combining two arrays into a single array.
 Reversing	Reversing the elements of an array.
 
+
+2D arrays:
+----------
+Eg.,
+int a[3][4] = {
+    {12, 1, -9, 23},
+    {14, 7, 11, 121},
+    {6, 78, 15, 34},
+};
+
+
+Common Matrix Operations:
+-------------------------
+Multiplication.
+Transpose.
+Determinant of a matrix.
+Orthogonal matrix.
+
