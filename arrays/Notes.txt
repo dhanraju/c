@@ -35,3 +35,49 @@ Transpose.
 Determinant of a matrix.
 Orthogonal matrix.
 
+3D arrays:
+----------
+Eg.: Collection of 3 2D arrays each containing 4 rowns and 2 columns.
+int a[3][4][2] = {
+    {
+        {2, 8},
+	{0, 6},
+	{4, 7},
+	{1, 5}
+    },
+    {
+        {3, 2},
+	{8, 6},
+	{1, 6},
+	{4, 5}
+    },
+    {
+        {3, 9},
+	{1, 8},
+	{6, 5},
+	{4, 0}
+    }
+}
+
+In above 3D array, element '9' is present at "0th row, 1st column of 2nd 2D
+array" i.e., a[2][0][1].
+
+For any 3D array a[x][y][z], the element a[i][j][k] can be accessed as:
+Base_address + i*y*z + j*z + k
+
+Support if the base address of a[3][4][2] is 402, then the address of
+element '9' is obtained as:
+402 + 2*4*2 + 0*2 + 1
+= 402 + 17
+= 470
+
+
+Arrays And Polynomials:
+-----------------------
+Polynomials like "5X^4 + 2X^3 + 7X^2 + 10X -8" can be maintained using an array.
+The simplest way to represent a polynomial of degree "n" is to store the
+coefficient of (n+1) terms of a polynomial in an array. To achieve this, each
+element of the array should consist of two values: coefficient and exponent.
+In a polynomial, it is assumed that the exponent of each successive term is less
+than that of the previous term.
+
