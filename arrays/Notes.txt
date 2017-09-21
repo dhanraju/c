@@ -81,3 +81,28 @@ element of the array should consist of two values: coefficient and exponent.
 In a polynomial, it is assumed that the exponent of each successive term is less
 than that of the previous term.
 
+Polynomial Addition:
+--------------------
+In given source code, polyadd() is called by passing p1 and p2 which returns the
+addition of polynomials p1 and p2 which we are collecting in p3. In function
+polyadd(), arrays representing the two polynomials are traversed and are
+compared on a term-by-term basis.
+- If the exponents of the two terms being compared are equal then their
+  coefficeints are added and the result is stored in the third polynomial.
+- If the exponents of two terms are not equal then the term with the bigger
+  exponenet is added to the thrid polynomial.
+- If the term with an exponent is present in only one of the two polynomials
+  then that term is added as it is to the third polynomial.
+
+Polynomial Multiplication:
+--------------------------
+In given source code, polymul() is called by passing p1 and p2 which returns the
+multiplication of polynomials p1 and p2 which we are collecting in p3. In
+function, first we checked that whether the two polynomials p1 and p2 are
+non-empty. If ther are not then the control goes in a pair of for loop. Here
+each term of the first polynomial contained in p1 is multiplied with every term
+of second polynomial contained in p2. While doing so we have called polyappend()
+to add the terms to p. The first resultant polnomial equation is stored in
+temporary variable temp of the type struct poly. Then onwards the function
+polyadd() is called to add the resulting polynomial equations.
+

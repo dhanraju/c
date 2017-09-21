@@ -21,11 +21,13 @@ struct poly {
 void initpoly(struct poly *);
 void polyappend(struct poly *, int c, int e);
 struct poly polyadd(struct poly, struct poly);
+struct poly polymul(struct poly, struct poly);
 void display(struct poly);
 
 int main() {
-    struct poly p1, p2, p3;
+    struct poly p1, p2, p3, p4, p5, p6;
 
+    // For ploynomial addition.
     initpoly(&p1);
     initpoly(&p2);
     initpoly(&p3);
@@ -42,6 +44,7 @@ int main() {
     polyappend(&p2, 1, 1);
     polyappend(&p2, 2, 0);
 
+    printf("***** Addition of two polynomials *****\n");
     p3 = polyadd(p1, p2);
 
     printf("First polynomial: \n");
@@ -52,6 +55,34 @@ int main() {
 
     printf("Resultant polynomial: \n");
     display(p3);
+    printf("***************************************\n");
+
+    // For ploynomial multiplication.
+    initpoly(&p4);
+    initpoly(&p5);
+    initpoly(&p6);
+
+    polyappend(&p4, 1, 4);
+    polyappend(&p4, 2, 3);
+    polyappend(&p4, 2, 2);
+    polyappend(&p4, 2, 1);
+
+    polyappend(&p5, 2, 3);
+    polyappend(&p5, 3, 2);
+    polyappend(&p5, 4, 1);
+
+    printf("***** Multiplication of two polynomials *****\n");
+    p6 = polymul(p4, p5);
+
+    printf("First polynomial: \n");
+    display(p4);
+
+    printf("Second polynomial: \n");
+    display(p5);
+
+    printf("Resultant polynomial: \n");
+    display(p6);
+    printf("***************************************\n");
 
     return 0;
 }
@@ -130,4 +161,35 @@ struct poly polyadd(struct poly p1, struct poly p2) {
     return p3;
 }
 		    
+/* Multiplies two polynomials p1 and p2. */
+struct poly polymul(struct poly p1, struct poly p2) {
+    int coeff, exp;
+    struct poly temp, p3;
+
+    initpoly(&temp);
+    initpoly(&p3);
+
+    if(p1.noofterms != 0 && p2.noofterms != 0) {
+        int i;
+	for(i=0; i<p1.noofterms; i++) {
+	    int j;
+	    struct poly p;
+	    initpoly(&p);
+
+	    for(j=0; j<p2.noofterms; j++) {
+	        coeff = p1.t[i].coeff * p2.t[j].coeff;
+		exp = p1.t[i].exp + p2.t[j].exp;
+		polyappend(&p, coeff, exp);
+	    }
+
+	    if(i != 0) {
+                p3 = polyadd(temp, p);
+		temp = p3;
+	    }
+	    else
+	        temp = p;
+	}
+    }
+    return p3;
+}
 
