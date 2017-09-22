@@ -1,0 +1,8 @@
+Operations performed on strings:
+--------------------------------
+Length		Finds the length of the string.
+Copy		Copies the contents of one string to another string.
+Concatenate	Appends one string at the end of another string.
+Compare		Compares two strings and find whether they are identical or not.
+
+
