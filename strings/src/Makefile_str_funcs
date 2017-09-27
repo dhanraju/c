@@ -1,0 +1,24 @@
+
+IDIR = ../hfiles
+CC=gcc
+CFLAGS=-I$(IDIR)
+
+ODIR = ../obj
+
+_DEPS = str_funcs.h
+DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
+
+_OBJ = str_funcs.o str_funcs_usage.o
+OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
+
+$(ODIR)/%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+str_funcs_usage: $(OBJ)
+	gcc -o $@ $^ $(CFLAGS) $(LIBS)
+
+.PHONY: clean
+
+clean:
+	rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~ str_funcs_usage
+

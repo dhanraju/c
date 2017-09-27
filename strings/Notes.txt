@@ -6,3 +6,24 @@ Concatenate	Appends one string at the end of another string.
 Compare		Compares two strings and find whether they are identical or not.
 
 
+Brute Force Algorithm:
+----------------------
+Used for pattern matching.
+Alg:
+The string 's' in which the pattern string is to be searched is scanned char by
+char. Beginning from 0th char of string 's', each char is compared with each and
+every char of the pattern string 'p'. This process continues till either there
+is no mismatch or the pattern string 'p' is not exhausted.
+If a match is found then the index of char of 's' from which the comparison
+began is returned as the position where the pattern string 'p' is found.
+If there is mismatch then next char of string 's' is considered and there
+onwards again it is compared with the chars of the pattern string 'p'.
+The process ends either when a match is found or when the number of chars in the
+string 's' that remain to be scanned is less than the total number of chars in
+the pattern string 'p'.
+
+eg:
+s = "NagpurKicit"
+p = "Kicit"
+
+The pattern string "Kicit" is found at postion 6 in given string "NagpurKicit".
