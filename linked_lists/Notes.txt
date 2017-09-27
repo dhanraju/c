@@ -1,0 +1,20 @@
+For storing similar data in memory we can use either an array of a linked list.
+But arrays have following limitations:
+- Arrays havbe fixed dimension. So, its size cannot be increased or decreased
+  during execution.
+- Array elemets are always stored in contiguous memory locations. At times, it
+  is not allowed to create the array though enough non-contiguous blocks of
+  memory is available.
+- Operations like insertion or deletion of an element is tedious.
+
+Linked lists store similar data in memory in non-contiguous. So, overcomes above
+limitations.
+
+Operations on linked lists:
+---------------------------
+Append at End.
+Add at Beginning.
+Add after.
+Display.
+Count of nodes.
+Delete a node.
