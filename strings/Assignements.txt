@@ -1,0 +1,24 @@
+1. Write a program using Brute-Force algorithm to search for a pattern string in
+a text where the text is scanned from right to left.
+2. Write a program to delete a sub-string of given string. For example if the
+string is 'What is life' and sub-string to be deleted is 'life' then first check
+if sub-string 'life' is present in the string and if present then delete it.
+3. Write a program, which deletes all the blank spaces except a single space
+between two words. For example, if a string is "No  pains,  No   gains", then
+the program should return a string as "No pains, No gains".
+4. Write a program which counts number of words, lines and characters in a given
+text.
+5. Write a program to implement find and replace utility. The program should ask
+the user to enter two words, one to be searched and the other to be replace the
+searched word.
+6. Write a program to count the occurrences fo character 'e' in the following
+array of pointers to strings.
+
+char *s[] = {
+    "We will teach you how to...",
+    "Move a mountain",
+    "Leave a building",
+    "Erase the past",
+    "Make a million",
+    "...all through C"
+};

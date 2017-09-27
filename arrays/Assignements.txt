@@ -1,0 +1,21 @@
+1. Write a program to find out the maximum and second maximum number from an
+array of integers.
+2. Write a program that accepts a number as input in English languaae format
+such as One Twenty Three (for 123) and prints the decimal form of it.
+3. The Mode of an array of numbers is the number 'm' in the array that is
+repeated most frequently. If more than one number is repeated with equal maximal
+frequencies, there is no mode. Write a program that accepts an array of numbers
+and returns the mode or an indication that the mode does not exist.
+4. Write a program to delete duplicate elements from an array of 20 integers.
+5. A square matrix is called symmetric if for all values of i and j a[i][j] =
+a[j][i]. Write a proram, which verifies whether a given 5x5 matrix is symmetric,
+or not.
+6. There are two arrays A and B. A contains 25 elements, whereas, B contains 30
+elements. Write a function to create an array C that contains only those
+elements that are common to A and B.
+7. A magic square of 5 rows x5 columns contains different elements. Write a
+function to verify whether the sum of each individual column elements, sum of
+each individual row elements and sum of diagonal elements is equal or not.
+8. Usuallya polynomial is stored in an arry with exponents of each term in
+decreasing order. Write a procedure to reverse this order, so that now the terms
+are arranged in increasing order.
